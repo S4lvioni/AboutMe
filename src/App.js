@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import cabeca from './img/eu.jpeg'
 import './App.css';
+import cabeca2 from './img/eu2.jpeg'
+import WebFont from 'webfontloader';
+
 
 function App() {
+  WebFont.load({
+    google: {
+      families: ['Playfair Display', 'serif','Opens Sans','sans-serif']
+    }
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <div className="cabeçalho">
+        <h1 className="titulo typewriter">Alexandre Salvioni</h1>
+      </div>
+      <div className="section1">
+        <img className="foto" src={cabeca}/>
+        <div className="texto1">
+          <p >Hi! My name is Alexandre. I'm a 20 y/o Software Engineering Student, currently working with Landing Pages Development. I like to mess with colors palettes and pretend to know how to make a website!</p>
+        </div>
+        
+      </div>
     </div>
   );
 }
